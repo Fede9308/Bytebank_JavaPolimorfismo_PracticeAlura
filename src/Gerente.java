@@ -1,24 +1,23 @@
 
 public class Gerente extends Funcionario implements Autenticacion {
 	
-	private int contraseña;
-	
+    private AutenticacionUtil autenticador;
+
+    public Gerente() {
+        this.autenticador = new AutenticacionUtil();
+    }
 
 
 	  @Override
 	    public void setContraseña(int contraseña) {
-	        this.contraseña = contraseña;
+		  this.autenticador.setContraseña(contraseña);
 
 	    }
 
 
 	   @Override
 	    public boolean autenticar(int contraseña) {
-	        if (this.contraseña == contraseña) {
-	            return true;
-	        } else {
-	            return false;
-	        }
+		   return this.autenticador.autenticar(contraseña);
 	    }
 	
 	

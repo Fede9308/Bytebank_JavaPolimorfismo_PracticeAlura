@@ -1,7 +1,11 @@
 
 public class Administrador extends Funcionario implements Autenticacion {
 
-	private int contraseña;
+	private AutenticacionUtil autenticador;
+
+	public Administrador() {
+	        this.autenticador = new AutenticacionUtil();
+	}
 	
 	@Override
 	public double getBonificacion() {
@@ -11,17 +15,12 @@ public class Administrador extends Funcionario implements Autenticacion {
 
 	@Override
 	public void setContraseña(int contraseña) {
-		  this.contraseña = contraseña;
-		
+		this.autenticador.setContraseña(contraseña);
 	}
 
 	@Override
 	public boolean autenticar(int contraseña) {
-		   if (this.contraseña == contraseña) {
-	            return true;
-	        } else {
-	            return false;
-	        }
+		 return this.autenticador.autenticar(contraseña);
 	}
 
 	

@@ -5,7 +5,14 @@ public class Cliente implements Autenticacion {
     private String nombre;
     private String numeroIdentidad;
     private String profesion;
-    private int contraseña;
+   
+    
+    private AutenticacionUtil autenticador;
+    
+    public Cliente() {
+        this.autenticador = new AutenticacionUtil();
+    }
+    
 	public String getNombre() {
 		return nombre;
 	}
@@ -26,15 +33,11 @@ public class Cliente implements Autenticacion {
 	}
 	@Override
 	public void setContraseña(int contraseña) {
-		this.contraseña = contraseña;
+		this.autenticador.setContraseña(contraseña);
 		
 	}
 	@Override
 	public boolean autenticar(int contraseña) {
-        if (this.contraseña == contraseña) {
-            return true;
-        } else {
-            return false;
-        }
+		return this.autenticador.autenticar(contraseña);
     }
 }
