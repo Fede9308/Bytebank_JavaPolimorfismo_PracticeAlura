@@ -1,10 +1,11 @@
 
 
-public class Cliente {
+public class Cliente implements Autenticacion {
 
     private String nombre;
     private String numeroIdentidad;
     private String profesion;
+    private int contraseña;
 	public String getNombre() {
 		return nombre;
 	}
@@ -23,5 +24,17 @@ public class Cliente {
 	public void setProfesion(String profesion) {
 		this.profesion = profesion;
 	}
-
+	@Override
+	public void setContraseña(int contraseña) {
+		this.contraseña = contraseña;
+		
+	}
+	@Override
+	public boolean autenticar(int contraseña) {
+        if (this.contraseña == contraseña) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
