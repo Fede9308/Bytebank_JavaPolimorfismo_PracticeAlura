@@ -13,5 +13,10 @@ public class CuentaAhorros extends Cuenta {
 		super.saldo += valor;
 	}
 	
+	@Override
+	public String toString() {
+	    return "CuentaAhorros, " + super.toString();
+	}
+	
 	
 }

@@ -1,5 +1,10 @@
 package br.com.bytebank.banco.modelo;
-
+/**
+ * 
+ * @author Becerra Federico
+ * @version 0.1
+ *
+ */
 
 public class Cliente implements Autenticacion {
 
@@ -33,12 +38,12 @@ public class Cliente implements Autenticacion {
 		this.profesion = profesion;
 	}
 	@Override
-	public void setContraseña(int contraseña) {
-		this.autenticador.setContraseña(contraseña);
+	public void setContrasena(int contrasena) {
+		this.autenticador.setContrasena(contrasena);
 		
 	}
 	@Override
-	public boolean autenticar(int contraseña) {
-		return this.autenticador.autenticar(contraseña);
+	public boolean autenticar(int contrasena) {
+		return this.autenticador.autenticar(contrasena);
     }
 }

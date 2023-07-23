@@ -16,7 +16,7 @@ public class TestGerente {
         System.out.println(g1.getSalario());
       
 
-        g1.setContraseña(2222);
+        g1.setContrasena(2222);
         boolean autentico = g1.autenticar(2222);
 
         System.out.println(autentico);

@@ -15,13 +15,13 @@ public class Administrador extends Funcionario implements Autenticacion {
 	}
 
 	@Override
-	public void setContraseña(int contraseña) {
-		this.autenticador.setContraseña(contraseña);
+	public void setContrasena(int contrasena) {
+		this.autenticador.setContrasena(contrasena);
 	}
 
 	@Override
-	public boolean autenticar(int contraseña) {
-		 return this.autenticador.autenticar(contraseña);
+	public boolean autenticar(int contrasena) {
+		 return this.autenticador.autenticar(contrasena);
 	}
 
 	

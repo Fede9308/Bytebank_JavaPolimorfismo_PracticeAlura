@@ -23,4 +23,10 @@ public class CuentaCorriente extends Cuenta implements Tributacion {
 		return super.saldo * 0.01;
 	}
 	
+	
+	@Override
+	public String toString() {
+	    return "CuentaCorriente, " + super.toString();
+	}
+	
 }

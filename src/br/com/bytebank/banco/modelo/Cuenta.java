@@ -1,5 +1,12 @@
 package br.com.bytebank.banco.modelo;
 
+/**
+ * 
+ * @author Becerra Federico
+ * @version 0.1
+ *
+ */
+
 public abstract class Cuenta {
 	
 	protected double saldo;
@@ -8,6 +15,12 @@ public abstract class Cuenta {
 	private Cliente titular;
 	private static int total;
 	
+	/**
+	 * 
+	 * Constructor para inicializar el objeto Cuenta a partir da agencia y numero
+	 * @param agencia
+	 * @param numero
+	 */
 	
 	public Cuenta (int agencia, int numero){
 	    this.agencia = agencia;
@@ -25,6 +38,12 @@ public abstract class Cuenta {
 	
 	public abstract void depositar(double valor);
 	
+	/**
+	 * 
+	 * valor necesita ser menor o igual al saldo
+	 * @param valor
+	 * @throws SaldoInsuficienteException
+	 */
 	
 	public void sacar(double valor) throws SaldoInsuficienteException{
 
@@ -74,6 +93,11 @@ public abstract class Cuenta {
 
 	public double getSaldo() {
 		return saldo;
+	}
+	
+	@Override
+	public String toString() {
+	    return "Numero: " + this.numero + ", Agencia: " + this.agencia;
 	}
 	
 	

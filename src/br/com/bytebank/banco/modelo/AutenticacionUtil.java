@@ -2,14 +2,14 @@ package br.com.bytebank.banco.modelo;
 
 public class AutenticacionUtil {
 		
-	private int contraseña;
+	private int contrasena;
 
-    public void setContraseña(int contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(int contrasena) {
+        this.contrasena = contrasena;
     }
 
-    public boolean autenticar(int contraseña) {
-        if (this.contraseña == contraseña) {
+    public boolean autenticar(int contrasena) {
+        if (this.contrasena == contrasena) {
             return true;
         } else {
             return false;
